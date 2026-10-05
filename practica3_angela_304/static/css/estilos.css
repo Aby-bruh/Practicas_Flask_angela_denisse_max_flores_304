@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.encabezado {
+    background: #1f5685;
+    color: white;
+    padding: 22px;
+    text-align: center;
+}
+
+.encabezado nav {
+    margin-top: 12px;
+}
+
+.encabezado a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.contenedor {
+    width: min(700px, 92%);
+    margin: 35px auto;
+}
+
+.tarjeta {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    box-shadow: 0 4px 14px rgba(0,0,0,.10);
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    font-weight: bold;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 11px;
+    margin-top: 6px;
+    border-radius: 7px;
+}
+
+input, select {
+    border: 1px solid #bbb;
+}
+
+button {
+    margin-top: 20px;
+    border: none;
+    background: #2f75b5;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.resultado {
+    margin-top: 20px;
+    padding: 12px;
+    background: #eaf5ea;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.error {
+    margin-top: 20px;
+    padding: 12px;
+    background: #fdecec;
+    color: #a61b1b;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.oculto {
+    display: none;
+}

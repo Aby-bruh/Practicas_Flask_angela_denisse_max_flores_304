@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Servidor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+
+<body>
+    <header class="encabezado">
+        <h1>Calculadora compartiva</h1>
+        <nav>
+            <a href="/servidor">Servidor</a>
+            <a href="/cliente">Cliente</a>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <section class="tarjeta">
+            <h2>Procesamiento del lado del servidor</h2>
+            <p>Python y Flask realizan la operación.</p>
+
+            <form method="POST">
+                <label for="numero1">Primer número</label>
+                <input id="numero1" name="numero1" type="number" step="any" required>
+
+                <label for="numero2">Segundo número</label>
+                <input id="numero2" name="numero2" type="number" step="any" required>
+
+                <label for="operacion">Operación</label>
+                <select id="operacion" name="operacion">
+                    <option value="suma">Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="multiplicacion">Multiplicación</option>
+                    <option value="division">División</option>
+                </select>
+
+                <button type="submit">Calcular con Flask</button>
+            </form>
+
+            {% if resultado is not none %}
+                <p class="resultado">Resultado: {{ resultado }}</p>
+            {% endif %}
+
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

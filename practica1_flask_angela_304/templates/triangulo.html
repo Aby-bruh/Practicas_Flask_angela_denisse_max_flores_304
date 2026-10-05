@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área y perímetro de un triángulo</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .contenedor {
+            background-color: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #aaa;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .resultado {
+            margin-top: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+
+        <h1>Triángulo</h1>
+        <h2>Área y perímetro</h2>
+
+        <form method="POST">
+
+            <label>Base:</label><br>
+            <input type="number" name="base" step="any" required>
+
+            <br>
+
+            <label>Altura:</label><br>
+            <input type="number" name="altura" step="any" required>
+
+            <br>
+
+            <label>Lado 1:</label><br>
+            <input type="number" name="lado1" step="any" required>
+
+            <br>
+
+            <label>Lado 2:</label><br>
+            <input type="number" name="lado2" step="any" required>
+
+            <br>
+
+            <label>Lado 3:</label><br>
+            <input type="number" name="lado3" step="any" required>
+
+            <br><br>
+
+            <button type="submit">Calcular</button>
+
+        </form>
+
+        {% if area is not none %}
+        <div class="resultado">
+            <h2>Resultados</h2>
+
+            <p><strong>Área:</strong> {{ area }}</p>
+
+            <p><strong>Perímetro:</strong> {{ perimetro }}</p>
+        </div>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>
